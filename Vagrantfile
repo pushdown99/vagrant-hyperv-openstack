@@ -7,13 +7,13 @@ num = 2
 ip = '192.168.0.10'
 broad = '192.168.0.255'
 port = 1003
-master = "os-master"
+master = "openstack"
 
 Vagrant.configure("2") do |config|
   config.vm.define master do |c|
     c.vm.box=box
     c.vm.box_version = ver
-    c.vm.disk :disk, size: "40GB", primary: true
+    c.vm.disk :disk, size: "50GB", primary: true
     c.vm.provider :hyperv do |v|
       v.vmname=master
       v.cpus=2
