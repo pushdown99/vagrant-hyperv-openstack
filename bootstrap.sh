@@ -16,4 +16,7 @@ RABBIT_PASSWORD=\$ADMIN_PASSWORD
 SERVICE_PASSWORD=\$ADMIN_PASSWORD
 EOF
 
+chown -R vagrant ../devstack
+chgrp -R vagrant ../devstack
+
 #./stack.sh
