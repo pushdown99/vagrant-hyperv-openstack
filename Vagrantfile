@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   #config.vagrant.plugins = ["vagrant-env", "vagrant-hostmanager", "vagrant-disksize"]
   #config.disksize.size="20GB"
   config.vm.define master do |c|
-    c.vm.disk :disk, size: "20GB", primary: true
+    c.vm.disk :disk, size: "50GB", primary: true
     c.vm.box=box
     c.vm.box_version = ver
     c.vm.provider :hyperv do |v|
