@@ -19,4 +19,8 @@ EOF
 chown -R vagrant ../devstack
 chgrp -R vagrant ../devstack
 
+growpart /dev/sda 3
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+
 #./stack.sh
