@@ -3,6 +3,10 @@
 
 box = "boxen/ubuntu-22.04"
 ver = "2024.07.24.10"
+num = 2
+ip = '192.168.0.10'
+broad = '192.168.0.255'
+port = 1003
 master = "os-master"
 
 Vagrant.configure("2") do |config|
@@ -19,5 +23,6 @@ Vagrant.configure("2") do |config|
     c.vm.hostname=master
     c.vm.synced_folder ".", "/vagrant", disabled: true
     c.vm.network "forwarded_port", guest: 22, host: "#{port}0", auto_correct: true, id: "ssh"
+    c.disksize.size = '50GB'
   end
 end
